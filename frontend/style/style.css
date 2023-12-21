@@ -10,11 +10,6 @@
     padding: 0;
 }
 
-/* Html */
-html {
-    background-color: rgb(40, 235, 255);
-}
-
 /* Navbar */
 nav {
     position: fixed;
@@ -24,40 +19,78 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-    background-color: rgb(40, 235, 255);
+    background-color: rgb(15, 0, 30);
     font-family: Arial, sans-serif;
+    border-bottom: 3px solid white;
 }
 
 nav a {
+    width: 100%;
     padding: 1%;
     text-decoration: none;
-    color: black;
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: white;
+    color: rgb(15, 0, 30);
+    font-style: italic;
 }
 
 /* Main */
 main {
-    margin: 5%;
+    margin: 5% 0;
     font-family: Arial, sans-serif;
 }
 
+/* Title */
 #title {
+    min-height: 88vh;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    width: 100%;
 }
 
-#title div h1 {
+#boxOne, #boxTwo {
+    width: 40%;
+}
+
+#boxOne {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 10px 10px 100px rgba(0, 0, 255, 0.800);
+    border-radius: 20% 20% 35% 35%;
+}
+
+#boxOne img {
+    width: 80%;
+}
+
+#boxTwo h1 {
     font-family: 'Kastella';
-    font-size: 7em;
+    font-size: 800%;
     text-align: right;
     font-style: italic;
-    /* color: white; */
-    /* text-shadow: 0px 7px 10px rgba(255, 149, 167, 0.733); */
-    background: -webkit-linear-gradient(#837aff, pink);
+    text-shadow: 5px 5px 3px rgba(255, 106, 131, 0.612);
+    background: -webkit-linear-gradient(#1b0bff, #ff3859, rgb(255, 255, 127));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    padding-right: 3%;
+}
+
+#boxTwo p {
+    font-family: 'Kastella';
+    font-size: 250%;
+    font-weight: bold;
+    color: rgb(20, 27, 61);
+    text-shadow: 2px 3px white;
 }
 
 /* Footer */
@@ -71,7 +104,7 @@ footer {
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
-    background-color: black;
+    background-color: white;
     font-family: Arial;
     color: white;
 }
