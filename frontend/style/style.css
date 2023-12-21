@@ -1,36 +1,67 @@
+/* Fonts */
+@font-face {
+    font-family: 'Kastella';
+    src: url("../font/fanlste/fanlste.otf") format('truetype');
+}
+
+/* All */
 * {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
 }
 
+/* Html */
+html {
+    background-color: rgb(40, 235, 255);
+}
+
+/* Navbar */
 nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    border: solid black 1px;
-    background-color: grey;
+    background-color: rgb(40, 235, 255);
+    font-family: Arial, sans-serif;
 }
 
 nav a {
-    padding: 20px;
+    padding: 1%;
     text-decoration: none;
     color: black;
 }
 
-header {
-    margin: 5%;
-    text-align: center;
-}
-
+/* Main */
 main {
     margin: 5%;
+    font-family: Arial, sans-serif;
+}
+
+#title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#title div h1 {
+    font-family: 'Kastella';
+    font-size: 7em;
+    text-align: right;
+    font-style: italic;
+    /* color: white; */
+    /* text-shadow: 0px 7px 10px rgba(255, 149, 167, 0.733); */
+    background: -webkit-linear-gradient(#837aff, pink);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* Footer */
 footer {
-    position: fixed;
     margin: 5% 0 0 0;
     left: 0;
     right: 0;
@@ -41,6 +72,7 @@ footer {
     justify-content: space-around;
     align-items: flex-start;
     background-color: black;
+    font-family: Arial;
     color: white;
 }
 
