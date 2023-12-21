@@ -7,7 +7,7 @@
 - POO
 
 ## Non obligatoire
-- *Falsk*, *Django*
+- *Flask*, *Django*
 - *SQLite*, *MySQL*
 
 ## Evaluation
@@ -15,6 +15,8 @@
 - Pertinence BDD
 - Originalité, expérience utilisateur
 - Clarté du code (*docstring*, commentaires, structure...)
+- Répartition des tâches
+- README
 
 ## Organisation
 - 4 semaines (à partir du 08/01)
