@@ -19,7 +19,7 @@ html {
 header {
     height: 100vh;
     width: 100vw;
-    background-image: url(../images/fond_d_ecran.png);
+    background-image: url(../images/wallpaper.png);
     background-size: cover;
     background-position: bottom;
     filter: brightness(75%);
@@ -76,15 +76,24 @@ nav a:hover:after {
     filter: blur(10px);
 }
 
-/* title text */
+/* connect us */
 #accueil {
-    position: absolute;
-    z-index: 1;
-    margin-top: 6%;
-    margin-left: 60%;
-    width: 35%;
+    position: relative;
+    top: 10vh;
+    text-align: right;
     font-family: Kastella;
     color: white;
+    padding-right: 5%;
+    height: auto;
+}
+
+#accueil div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 47vh;
+    float: right;
+    width: 30%;
 }
 
 /* title */
@@ -95,7 +104,7 @@ nav a:hover:after {
 /* "us" */
 #accueil span {
     padding-right: 2%;
-    font-style: italic; 
+    font-style: italic;
     background: -webkit-linear-gradient(top, blue, purple, red);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -103,7 +112,6 @@ nav a:hover:after {
 
 /* comments */
 #accueil p {
-    width: 75%;
     font-size: 40px;
 }
 
@@ -203,4 +211,43 @@ footer {
 
 .link a:hover {
     color: white;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 1845px) {
+    /* title */
+    /* #accueil {
+        position: absolute;
+        z-index: 1;
+        margin-top: 6%;
+        margin-left: 60%;
+        width: 45%;
+        font-family: Kastella;
+        color: white;
+    } */
+
+    /* title text */
+    /* #accueil h1, #accueil span {
+        font-size: 100px;
+    } */
+
+    /* "us" */
+    /* #accueil span {
+        /* padding-right: 2%; */
+        font-style: italic; 
+        background: -webkit-linear-gradient(top, blue, purple, red);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    } */
+
+    /* comments */
+    /* #accueil div {
+        margin-right: 20%;
+    } */
+
+    /* #accueil p {
+        border: solid red;
+        width: 75%;
+        font-size: 40px;
+    } */
 }
