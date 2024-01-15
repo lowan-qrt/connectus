@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://api.fontshare.com/v2/css?f[]=pilcrow-rounded@700,400,500,900,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/frontend/styles/log/log.css">
+    <title>Inscription</title>
+</head>
+<body>
+
+    <!-- Main-->
+    <main>
+
+    <!-- form -->
+    <div class="container">
+        <form action="" id="form" class="form" method="post">
+                <h1>Inscription</h1>
+                <input type="text" name="username" id="username" placeholder="Username" required >
+                <br>  
+                <input type="password" placeholder="password" hidden, required>
+                <br>
+                <input type="email" name="email" id="email" placeholder="email" required> 
+
+                <button id="button1">Continuer</button>
+
+        </form>
+
+        <form action="" class="form-2" id="form-2" method="post">
+            <h1>Inscription</h1>
+            <input type="text" name="adress" id="adress" placeholder="adresss"required> <br>
+            <input type="text" name="name" id="name" placeholder="name" required><br>
+            <select name="genre" id="genre" class="select" required>
+                <option value="null">-------</option>
+                <option value="Homme">Homme</option>
+                <option value="Femme">Femme</option>
+                <option value="Autre">Autre</option>
+            </select>
+            <br><br>
+            <button id="button2">Continuer </button>
+            
+            <button class="retour" id="retour"> Retour</button>
+
+        </form>
+    </div>
+
+    </main>
+    <script src="/frontend/styles/log/log.js"></script>
+</body>
+</html>
