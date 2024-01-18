@@ -17,7 +17,11 @@ html {
 
 /* Header */
 header {
-    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     width: 100vw;
     background-image: url(../images/wallpaper.png);
     background-size: cover;
@@ -73,46 +77,60 @@ nav a:hover:after {
     width: 101%;
     height: 101%;
     background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.915));
-    filter: blur(10px);
+    /* filter: blur(10px); */
+    backdrop-filter: blur(5px);
 }
 
-/* connect us */
-#accueil {
+/* form */
+#form {
     position: relative;
-    top: 10vh;
-    text-align: right;
-    font-family: Kastella;
-    color: white;
-    padding-right: 5%;
-    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 60vh;
+    padding: 3% 0;
+    width: 55vw;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    font-family: Arial;
 }
 
-#accueil div {
+#form label {
+    width: 80%;
+    text-align: left;
+    padding-bottom: 1%;
+}
+
+#form input:not(#submit) {
+    padding: 1%;
+    border-radius: 8px;
+    background-color: #eee;
+    border: none;
+}
+
+#first {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 47vh;
-    float: right;
-    width: 30%;
+    height: 100%;
+    width: 80%;
+    padding-top: 3%;
 }
 
-/* title */
-#accueil h1, #accueil span {
-    font-size: 130px;
+/* button */
+#submit {
+    border-radius: 8px;
+    border: none;
+    background-color: #512da8;
+    color: white;
+    font-weight: bold;
+    padding: 1% 4%;
 }
 
-/* "us" */
-#accueil span {
-    padding-right: 2%;
-    font-style: italic;
-    background: -webkit-linear-gradient(top, blue, purple, red);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-/* comments */
-#accueil p {
-    font-size: 40px;
+#submit:hover {
+    cursor: pointer;
 }
 
 /* Footer */
