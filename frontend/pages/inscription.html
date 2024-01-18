@@ -4,33 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="icon" href="images/logo.ico">
-    <title>Connect Us</title>
+    <link rel="stylesheet" href="../styles/inscription.css">
+    <link rel="icon" href="../images/logo.ico">
+    <title>Inscription</title>
 </head>
 
 <body>
     <header>
         <!-- Navbar -->
         <nav>
-            <a id="special" href="home.html">Accueil</a>
-            <a href="pages/connexion.html">Connexion</a>
-            <a href="pages/inscription.html">Inscription</a>
-            <a href="pages/contact.html">Contact</a>
+            <a id="special" href="../home.html">Accueil</a>
+            <a href="connexion.html">Connexion</a>
+            <a href="inscription.html">Inscription</a>
+            <a href="contact.html">Contact</a>
         </nav>
 
         <!-- Dark linear filter -->
         <div id="hidder"></div>
 
-        <!-- Title text -->
-        <div id="accueil">
-            <h1>Connect <span>Us</span></h1>
-            <div>
-                <p>Créez, partagez et découvrez le monde
-                    qui nous entoure.</p>
-                <p>"Connectez-nous à vous."</p>
-            </div>
-        </div>
+        <!-- form -->
+        <form action="" id="form" class="form" method="post">
+            <h1>Inscription</h1>
+            <section id="first">
+                <label for="pseudonyme">*Pseudonyme</label>
+                <input id="pseudonyme" class="input" type="text" name="new_user" placeholder="Obligatoire" required >
+                <br>
+                <label for="email">*Adresse email</label>
+                <input id="email" class="input" type="text" name="new_user" placeholder="Obligatoire" required >
+                <br>
+                <label for="password">*Mot de passe</label>
+                <input id="password" class="input" type="password" name="new_user" placeholder="Obligatoire" required>
+                <br>
+            </section>
+            <br>
+            <a href="connexion.html" title="Se Connecter">Vous possédez déjà un compte ?</a>
+            <br>
+            <input id="submit" type="submit" value="CONTINUER">
+        </form>        
     </header>
 
     <footer>
@@ -65,30 +75,33 @@
                 <h3>NOUS CONTACTER</h3>
             </div>
             <div class="link" id="oneOne">
-                <a href="home.html">Accueil</a>
+                <a href="../home.html">Accueil</a>
             </div>
             <div class="link" id="oneTwo">
-                <a href="pages/connexion.html">Connexion</a>
+                <a href="connexion.html">Connexion</a>
             </div>
             <div class="link" id="oneThree">
-                <a href="pages/inscription.html">Inscription</a>
+                <a href="inscription.html">Inscription</a>
             </div>
             <div class="link" id="oneFour">
-                <a href="pages/contact.html">Contact</a>
+                <a href="contact.html">Contact</a>
             </div>
             <div class="link" id="twoOne">
-                <a href="pages/more_infos.html">À Propos</a>
+                <a href="more_infos.html">À Propos</a>
             </div>
             <div class="link" id="twoTwo">
-                <a href="pages/more_infos.html">Mentions légales</a>
+                <a href="more_infos.html">Mentions légales</a>
             </div>
             <div class="link" id="threeOne">
-                <a href="pages/contact.html#teamwork">Coordonnées</a>
+                <a href="contact.html#teamwork">Coordonnées</a>
             </div>
             <div class="link" id="threeTwo">
-                <a href="pages/contact.html#git_link">Dépôt GitHub</a>
+                <a href="contact.html#git_link">Dépôt GitHub</a>
             </div>
         </div>
     </footer>
+
+    <!-- JS Script -->
+    <script src="../scripts/inscription.js"></script>
 </body>
 </html>

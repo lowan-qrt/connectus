@@ -15,8 +15,8 @@
         <nav>
             <a id="special" href="../home.html">Accueil</a>
             <a href="connexion.html">Connexion</a>
-            <a href="#">Inscription</a>
-            <a href="#">Contact</a>
+            <a href="inscription.html">Inscription</a>
+            <a href="contact.html">Contact</a>
         </nav>
 
         <!-- Dark linear filter -->
@@ -26,12 +26,14 @@
         <form action="" id="form" class="form" method="post">
             <h1>Connexion</h1>
             <label for="username">Pseudonyme ou adresse email</label>
-            <input class="input" type="text" name="username" id="username" placeholder="Pseudonyme" required >
+            <input id="username" class="input" type="text" name="user_login"  placeholder="Ravi de vous revoir !" required >
             <br>
-            <label for="username">Pseudonyme ou adresse email</label>
-            <input class="input" type="password" placeholder="Mot de passe" hidden, required>
+            <label for="password">Mot de passe</label>
+            <input id="password" class="input" type="password" name="user_login" placeholder="Votre mot de passe est confidentiel" required>
             <br>
-            <input id="submit" type="submit" value="CONTINUER">
+            <a href="inscription.html" title="S'Inscrire">Vous n'avez pas de compte ?</a>
+            <br>
+            <input id="submit" type="submit" value="SE CONNECTER">
         </form>        
     </header>
 
@@ -73,24 +75,24 @@
                 <a href="connexion.html">Connexion</a>
             </div>
             <div class="link" id="oneThree">
-                <a href="#">Inscription</a>
+                <a href="inscription.html">Inscription</a>
             </div>
             <div class="link" id="oneFour">
-                <a href="#">Contact</a>
+                <a href="contact.html">Contact</a>
             </div>
             <div class="link" id="twoOne">
-                <a href="#">A Propos</a>
+                <a href="more_infos.html">À Propos</a>
             </div>
             <div class="link" id="twoTwo">
-                <a href="#">Mentions légales</a>
+                <a href="more_infos.html">Mentions légales</a>
             </div>
             <div class="link" id="threeOne">
-                <a href="#">Coordonnées</a>
+                <a href="contact.html#teamwork">Coordonnées</a>
+            </div>
+            <div class="link" id="threeTwo">
+                <a href="contact.html#git_link">Dépôt GitHub</a>
             </div>
         </div>
     </footer>
-
-    <!-- JS Script -->
-    <script src="../scripts/connexion.js"></script>
 </body>
 </html>
