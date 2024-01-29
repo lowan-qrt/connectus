@@ -1,42 +1,54 @@
+#coding:utf-8
 from flask import Flask, render_template, request
-import datetime
-"""
-Render template :   Permet de passer des variables python au code html pour les afficher sur la page -> exemple avec heure.html et eleves.html
-                    Permet aussi de lancer le fichier html depuis le code python. Tout est lancé depuis main.py
+import sql_bdd
 
-request :   Permet de récupérer des paramètres écrit dans l'URL : http://127.0.0.1:5000/eleves?c=2A&autre=blabla ici la fonction 
-            request.arg.get('c') renverra 2A -> Voir exemple sur @app.route('/eleves')   
-"""
-
+# Application
 app = Flask(__name__)
 
-@app.route('/') #@app.route('/') permet de définir vers quel url va servir le code python. Ici seulement index.html
-def bonjour():
-    return render_template('index.html')
+# //////// Pages ////////
+@app.route('/')
+def index():
+    return render_template('home.html')
 
-@app.route('/heure')
-def heure():
-    date_heure = datetime.datetime.now()
-    h = date_heure.hour
-    m = date_heure.minute
-    s = date_heure.second
-    return render_template('heure.html', heure=h, minute=m, seconde=s) #comme dit précédemment, on passe des variable python à notre dossier html
+@app.route('/connexion')
+def connection():
+    return render_template('connection.html')
 
-liste_eleves =  [
-    {'nom': 'Pomier', 'prenom': 'Max', 'classe': 'TA'},
-    {'nom': 'Quarton', 'prenom': 'Lowan', 'classe': 'TB'},
-    {'nom': 'Onillon', 'prenom': 'Jean', 'classe': 'TC'},
-    {'nom': 'Vigneron', 'prenom': 'Martin', 'classe': 'TD'},
-]
+@app.route('/inscription')
+def inscription():
+    return render_template('inscription.html')
 
-@app.route('/eleves')
-def eleves():
-    classe = request.args.get('c') 
-    if classe:
-        eleves_selectionnes = [eleve for eleve in liste_eleves if eleve['classe'] == classe] #permet d'afficher seulement les élèves ayant un paramètre concordant avec le paramètre de l'URL qu'on a récupéré
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
+@app.route('/plus-d-infos')
+def more_infos():
+    return render_template('more_infos.html')
+# ///////////////////////
+
+@app.route('/ma-page', methods=['POST'])
+def sign_in():
+    args = request.form # get form elements
+    print('\n\tMESSAGE: Datas sent by form:')
+    for arg, value in args.items():
+        print(f'{arg} : {value}')
+    print('\n')
+    pseudo = args.get('pseudo')
+    password = args.get('password')
+    email = args.get('email')
+    firstname = args.get('first_name')
+    lastname = args.get('last_name')
+    birthday = args.get('birthday')
+    phone = args.get('phone')
+    answer = sql_bdd.signIn(pseudo, password, email, firstname, lastname, birthday, phone) # sent elements to db
+    
+    if answer == False:
+        errorPseudo = "Oups ! Ce nom d'utilisateur est déjà utilisé. Essayez-en un autre."
+        render_template('inscription.html', errorPseudo = errorPseudo)
     else:
-        eleves_selectionnes = [] #permet de renvoyer un tableau vide s'il n'y a pas d'lélèves correspondant à la recherche 
-    return render_template('eleves.html', eleves=eleves_selectionnes) 
+        return render_template('userpage.html', fname=firstname, lname=lastname)
 
-if __name__ == '__main__': #permet de run l'appli
+# Execute the app
+if __name__ == '__main__':
     app.run(debug=True)

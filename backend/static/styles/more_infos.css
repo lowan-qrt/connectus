@@ -73,16 +73,19 @@ main {
     padding: 7% 5% 5%;
     font-family: Kastella;
     font-size: 2rem;
+    
 }
 
 #teamwork h1 {
     text-decoration: underline;
+    backdrop-filter: blur(5px);
+    width: max-content;
 }
 
 /* Footer */
 footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 3% 4%;
     background-color: black;
     color: white;
@@ -90,10 +93,53 @@ footer {
     text-align: left;
 }
 
+#one {
+    display: flex;
+    flex-direction: column;
+}
+
+#oneOne {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#two {
+    display: flex;
+    flex-direction: column;
+}
+
+#twoOne {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#three {
+    display: flex;
+    flex-direction: column;
+}
+
+#threeOne {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
 /* description & notes of publication */
-#left {
-    width: 40%;
-    font-size: 16px;
+#top {
+    text-align: justify;
+    font-size: 25px;
+    backdrop-filter: blur(5px);
+}
+
+#bot {
+    text-align: justify;
+    font-size: 25px;
+    backdrop-filter: blur(5px);
+}
+
+#CC_link_a {
+    color: blueviolet;
 }
 
 /* authors line */
@@ -103,79 +149,10 @@ footer {
     color: grey;
 }
 
-/* links & informations */
-#right {
-    display: grid;
-    grid-template-columns: repeat(3, 200px);
-    grid-template-rows: repeat(5, 1fr);
-    justify-content: space-around;
-    text-align: left;
-}
-
-/* navigation */
-#one {
-    grid-column: 1;
-    grid-row: 1;
-}
-
-/* links */
-#oneOne {
-    grid-column: 1;
-    grid-row: 2;
-}
-
-#oneTwo {
-    grid-column: 1;
-    grid-row: 3;
-}
-
-#oneThree {
-    grid-column: 1;
-    grid-row: 4;
-}
-
-#oneFour {
-    grid-column: 1;
-    grid-row: 5;
-}
-
-/* more infos */
-#two {
-    grid-column: 2;
-    grid-row: 1;
-}
-
-/* links */
-#twoOne {
-    grid-column: 2;
-    grid-row: 2;
-}
-
-#twoTwo {
-    grid-column: 2;
-    grid-row: 3;
-}
-
-/* contact us */
-#three {
-    grid-column: 3;
-    grid-row: 1;
-}
-
-/* link */
-#threeOne {
-    grid-column: 3;
-    grid-row: 2;
-}
-
-#threeTwo {
-    grid-column: 3;
-    grid-row: 3; 
-}
-
 /* all links */
 .link a {
     color: grey;
+    padding: 15% 0;
 }
 
 .link a:hover {

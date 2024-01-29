@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/contact.css">
-    <link rel="icon" href="../images/logo.ico">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/contact.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/logo.ico') }}">
     <title>Contact</title>
 </head>
 
@@ -13,10 +13,10 @@
     <header>
         <!-- Navbar -->
         <nav>
-            <a id="special" href="../home.html">Accueil</a>
-            <a href="connexion.html">Connexion</a>
-            <a href="inscription.html">Inscription</a>
-            <a href="contact.html">Contact</a>
+            <a id="special" href="{{ url_for('index') }}">Accueil</a>
+            <a href="{{ url_for('connection') }}">Connexion</a>
+            <a href="{{ url_for('inscription') }}">Inscription</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
         </nav>
     </header>
 
@@ -93,28 +93,28 @@
                 <h3>NOUS CONTACTER</h3>
             </div>
             <div class="link" id="oneOne">
-                <a href="../home.html">Accueil</a>
+                <a href="{{ url_for('index') }}">Accueil</a>
             </div>
             <div class="link" id="oneTwo">
-                <a href="connexion.html">Connexion</a>
+                <a href="{{ url_for('connection') }}">Connexion</a>
             </div>
             <div class="link" id="oneThree">
-                <a href="inscription.html">Inscription</a>
+                <a href="{{ url_for('inscription') }}">Inscription</a>
             </div>
             <div class="link" id="oneFour">
-                <a href="contact.html">Contact</a>
+                <a href="{{ url_for('contact') }}">Contact</a>
             </div>
             <div class="link" id="twoOne">
-                <a href="more_infos.html">À Propos</a>
+                <a href="{{ url_for('more_infos') }}">À Propos</a>
             </div>
             <div class="link" id="twoTwo">
-                <a href="more_infos.html">Mentions légales</a>
+                <a href="{{ url_for('more_infos') }}">Mentions légales</a>
             </div>
             <div class="link" id="threeOne">
-                <a href="#teamwork">Coordonnées</a>
+                <a href="{{ url_for('contact') }}#teamwork">Coordonnées</a>
             </div>
             <div class="link" id="threeTwo">
-                <a href="#git_link">Dépôt GitHub</a>
+                <a href="{{ url_for('contact') }}#git_link">Dépôt GitHub</a>
             </div>
         </div>
     </footer>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/more_infos.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/logo.ico') }}">
+    <title>Plus d'Infos</title>
+</head>
+
+<body>
+    <header>
+        <!-- Navbar -->
+        <nav>
+            <a id="special" href="{{ url_for('index') }}">Accueil</a>
+            <a href="{{ url_for('connection') }}">Connexion</a>
+            <a href="{{ url_for('inscription') }}">Inscription</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="teamwork">
+            <h1>À Propos</h1>
+            <br>
+            <div id="top">
+                <p>Ce site web a été élaboré et conçu avec passion par une équipe dévouée composée de Martin Vigneron, Max
+                    Pomier, Jean Onillon et Lowan Quarton. L'idée a pris forme dans le cadre d'un projet scolaire spécialité
+                    Numérique et Sciences Informatiques de niveau Terminale, réalisé avec enthousiasme et créativité.</p>
+                <br>
+                <p>Le contexte de réalisation en 2024 a permis à notre équipe de mettre en œuvre ses compétences et
+                    connaissances acquises tout au long de notre parcours éducatif. Ce projet a été l'occasion de relever
+                    des défis passionnants, de développer nos compétences techniques et de donner vie à une vision commune.
+                    Nous sommes fiers de partager ce résultat avec vous, et nous espérons que notre site apporte une
+                    expérience enrichissante. N'hésitez pas à explorer les différentes sections et à nous faire part de vos
+                    retours.</p>
+                <br>
+                <p>Merci de votre visite !</p>
+                <!-- Authors -->
+                <p id="authors">— L'équipe de développeurs</span></p>
+            </div>
+            <br>
+            <br>
+            <h1>Mentions légales</h1><br>
+            <p id="bot">
+                Dans le cadre de partage, l’ensemble des œuvres produites du projet Connect Us sont soumis à l’ensemble de la licence Creative Commons CC BY-NC-SA 4.0 © 2 par Martin Vigneron, Max Pomier, Jean Onillon et Lowan Quarton, auteurs du projet. Pour afficher une copie de cette licence, visitez <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" id="CC_link_a">les licences creatives commons</a>.        
+            </p>
+            </section>
+    </main>
+
+    <footer>
+        <!-- Links & informations -->
+            <div id="one">
+                <h3>NAVIGATION</h3>
+                <div class="link" id="oneOne">
+                    <a href="{{ url_for('index') }}">Accueil</a>
+                    <a href="{{ url_for('connection') }}">Connexion</a>
+                    <a href="{{ url_for('inscription') }}">Inscription</a>
+                    <a href="{{ url_for('contact') }}">Contact</a>
+                </div>
+            </div>
+
+            <div id="two">
+                <h3>PLUS D'INFOS</h3>
+                <div class="link" id="twoOne">
+                    <a href="{{ url_for('more_infos') }}">À Propos</a>
+                    <a href="{{ url_for('more_infos') }}">Mentions légales</a>
+                </div>
+            </div>
+
+            <div id="three">
+                <h3>NOUS CONTACTER</h3>
+                <div class="link" id="threeOne">
+                    <a href="{{ url_for('contact') }}#teamwork">Coordonnées</a>
+                    <a href="{{ url_for('contact') }}#git_link">Dépôt GitHub</a>
+                </div>
+            </div>          
+    </footer>
+</body>
+</html>
