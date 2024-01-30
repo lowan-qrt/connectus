@@ -1,11 +1,9 @@
 #codind:utf-8
 import sqlite3
-import os
 
 def signIn(pseudo, password, email, firstname, lastname, birthday, phone):
-    bdd_way = os.path.join('backend', 'BDD.db') # complete path
-    # Établir une connexion à la base de données (créez le fichier si nécessaire)
-    connection = sqlite3.connect(bdd_way)
+
+    connection = sqlite3.connect('backend/BDD.db')
     cursor = connection.cursor()
 
     pseudos_list = cursor.execute("SELECT pseudo FROM Members")
