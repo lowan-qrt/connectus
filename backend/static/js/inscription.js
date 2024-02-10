@@ -6,7 +6,7 @@ function calculateDateMin() {
     minDate.setFullYear(today.getFullYear() - 18);
     
     // Plus one day
-    minDate.setDate(minDate.getDate() + 1);
+    // minDate.setDate(minDate.getDate() + 1);
 
     var inputDate = document.getElementById('birthday');
     inputDate.setAttribute('max', minDate.toISOString().split('T')[0]);
@@ -22,21 +22,20 @@ function nextPart() {
 
     // Updates
     if (button.value === 'CONTINUER') {
-        form.style.margin = '10vh 0 6vh';
+        form.style.margin = '13vh 0 6vh';
         form.style.height = '100vh';
         firstPart.insertAdjacentHTML('beforeend', `
-        <label for="first_name">*Prénom</label>
-        <input name="first_name" id="first_name" class="input" type="text" placeholder="Obligatoire" required>
+        <label for="first_name">* Prénom</label>
+        <input name="first_name" id="first_name" class="input" type="text" placeholder="Connect" title="* Requis" required>
         <br>
-        <label for="last_name">*Nom</label>
-        <input name="last_name" id="last_name" class="input" type="text" placeholder="Obligatoire" required>
+        <label for="last_name">* Nom</label>
+        <input name="last_name" id="last_name" class="input" type="text" placeholder="Us" title="* Requis" required>
         <br>
-        <label for="birthday">*Date de naissance</label>
-        <input name="birthday" id="birthday" class="input" type="date" placeholder="Sélectionnez une date" required>
+        <label for="birthday">* Date de naissance</label>
+        <input name="birthday" id="birthday" class="input" type="date" placeholder="Sélectionnez une date" title="* 18 ans minimum" required>
         <br>
         <label for="phone">Numéro de téléphone</label>
-        <input name="phone" id="phone" class="input" type="text" placeholder="Optionnel">
-        <p>{{ errorPseudo }}</p>
+        <input name="phone" id="phone" class="input" type="text" placeholder="Optionnel" title="Optionnel">
         `);
 
         calculateDateMin(); // adjust the min date

@@ -1,7 +1,8 @@
 /* Fonts */
 @font-face {
     font-family: 'Kastella';
-    src: url("../font/fanlste/fanlste.otf") format('truetype');
+    /* src: url('{{ url_for("static", filename="../../../../../frontend/font/kastella_script/KastellaScript_PERSONAL_USE_ONLY.otf") }}'); */
+    src: url('../../../frontend/font/kastella_script/KastellaScript_PERSONAL_USE_ONLY.otf') format('truetype');
 }
 
 /* All */
@@ -13,6 +14,7 @@
 /* Html */
 html {
     overflow-x: hidden;
+    font-size: 11px; /* reference */
 }
 
 /* Header */
@@ -39,12 +41,12 @@ nav {
 nav a {
     width: 100%;
     text-align: center;
-    padding: 20px;
+    padding: 1.5%;
     font-family: Arial;
     font-weight: bold;
     color: whitesmoke;
     text-shadow: 4px 4px rgb(0, 0, 0);
-    font-size: 20px;
+    font-size: 2rem;
     text-decoration: none;
 }
 
@@ -53,7 +55,6 @@ nav a {
     background: -webkit-linear-gradient(left, blue, purple, red);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 140%;
     text-shadow: 2px 2px rgba(255, 255, 255, 0.040);
 }
 
@@ -79,6 +80,7 @@ nav a:hover:after {
 /* connect us */
 #accueil {
     position: relative;
+    padding-top: 1%;
     top: 10vh;
     text-align: right;
     font-family: Kastella;
@@ -98,7 +100,7 @@ nav a:hover:after {
 
 /* title */
 #accueil h1, #accueil span {
-    font-size: 130px;
+    font-size: 12rem;
 }
 
 /* "us" */
@@ -110,9 +112,9 @@ nav a:hover:after {
     -webkit-text-fill-color: transparent;
 }
 
-/* comments */
+/* citation */
 #accueil p {
-    font-size: 40px;
+    font-size: 3.8rem;
 }
 
 /* Footer */
@@ -124,12 +126,13 @@ footer {
     color: white;
     font-family: Arial;
     text-align: left;
+    font-size: 1.6rem;
 }
 
 /* description & notes of publication */
 #left {
     width: 40%;
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 
 /* authors line */
@@ -142,10 +145,9 @@ footer {
 /* links & informations */
 #right {
     display: grid;
-    grid-template-columns: repeat(3, 200px);
+    grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(5, 1fr);
-    justify-content: space-around;
-    text-align: left;
+    grid-gap: 5rem;
 }
 
 /* navigation */
@@ -209,7 +211,6 @@ footer {
     grid-row: 3; 
 }
 
-
 /* all links */
 .link a {
     color: grey;
@@ -217,9 +218,4 @@ footer {
 
 .link a:hover {
     color: white;
-}
-
-/* RESPONSIVE */
-@media screen and (max-width: 1845px) {
-    /* none */
 }

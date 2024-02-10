@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/more_infos.css') }}">
+    <link rel="stylesheet" type="font/otf" href="{{ url_for('static', filename='../../../../frontend/font/kastella_script/KastellaScript_PERSONAL_USE_ONLY.otf') }}">
     <link rel="icon" href="{{ url_for('static', filename='images/logo.ico') }}">
-    <title>Plus d'Infos</title>
+    <title>Inscription</title>
 </head>
 
 <body>
@@ -22,9 +23,9 @@
 
     <main>
         <section id="teamwork">
-            <h1>À Propos</h1>
-            <br>
             <div id="top">
+                <h1>À Propos</h1>
+                <br>
                 <p>Ce site web a été élaboré et conçu avec passion par une équipe dévouée composée de Martin Vigneron, Max
                     Pomier, Jean Onillon et Lowan Quarton. L'idée a pris forme dans le cadre d'un projet scolaire spécialité
                     Numérique et Sciences Informatiques de niveau Terminale, réalisé avec enthousiasme et créativité.</p>
@@ -38,44 +39,43 @@
                 <br>
                 <p>Merci de votre visite !</p>
                 <!-- Authors -->
-                <p id="authors">— L'équipe de développeurs</span></p>
+                <p id="authors">— L'équipe de développeurs</p>
             </div>
-            <br>
-            <br>
-            <h1>Mentions légales</h1><br>
-            <p id="bot">
-                Dans le cadre de partage, l’ensemble des œuvres produites du projet Connect Us sont soumis à l’ensemble de la licence Creative Commons CC BY-NC-SA 4.0 © 2 par Martin Vigneron, Max Pomier, Jean Onillon et Lowan Quarton, auteurs du projet. Pour afficher une copie de cette licence, visitez <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" id="CC_link_a">les licences creatives commons</a>.        
-            </p>
-            </section>
+            <div id="bot">
+                <h1>Mentions légales</h1>
+                <br>
+                <p>Dans le cadre de partage, l’ensemble des œuvres produites du projet Connect Us sont soumis aux modalités de la licence Creative Commons CC BY-NC-SA 4.0 © 2 par Martin Vigneron, Max Pomier, Jean Onillon et Lowan Quarton, auteurs du projet. Pour afficher une copie de cette licence, visitez <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" id="CC_link">ce lien</a>.</p>
+            </div>
+        </section>
     </main>
 
     <footer>
         <!-- Links & informations -->
-            <div id="one">
-                <h3>NAVIGATION</h3>
-                <div class="link" id="oneOne">
-                    <a href="{{ url_for('index') }}">Accueil</a>
-                    <a href="{{ url_for('connection') }}">Connexion</a>
-                    <a href="{{ url_for('inscription') }}">Inscription</a>
-                    <a href="{{ url_for('contact') }}">Contact</a>
-                </div>
+        <div id="one">
+            <h3>NAVIGATION</h3>
+            <div class="link" id="oneOne">
+                <a href="{{ url_for('index') }}">Accueil</a>
+                <a href="{{ url_for('connection') }}">Connexion</a>
+                <a href="{{ url_for('inscription') }}">Inscription</a>
+                <a href="{{ url_for('contact') }}">Contact</a>
             </div>
+        </div>
 
-            <div id="two">
-                <h3>PLUS D'INFOS</h3>
-                <div class="link" id="twoOne">
-                    <a href="{{ url_for('more_infos') }}">À Propos</a>
-                    <a href="{{ url_for('more_infos') }}">Mentions légales</a>
-                </div>
+        <div id="two">
+            <h3>PLUS D'INFOS</h3>
+            <div class="link" id="twoOne">
+                <a href="{{ url_for('more_infos') }}">À Propos</a>
+                <a href="{{ url_for('more_infos') }}">Mentions légales</a>
             </div>
+        </div>
 
-            <div id="three">
-                <h3>NOUS CONTACTER</h3>
-                <div class="link" id="threeOne">
-                    <a href="{{ url_for('contact') }}#teamwork">Coordonnées</a>
-                    <a href="{{ url_for('contact') }}#git_link">Dépôt GitHub</a>
-                </div>
-            </div>          
+        <div id="three">
+            <h3>NOUS CONTACTER</h3>
+            <div class="link" id="threeOne">
+                <a href="{{ url_for('contact') }}#teamwork">Coordonnées</a>
+                <a href="{{ url_for('contact') }}#git_link">Dépôt GitHub</a>
+            </div>
+        </div>  
     </footer>
 </body>
 </html>

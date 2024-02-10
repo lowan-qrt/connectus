@@ -5,12 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/inscription.css') }}">
+    <link rel="stylesheet" type="font/otf" href="{{ url_for('static', filename='../../../../frontend/font/kastella_script/KastellaScript_PERSONAL_USE_ONLY.otf') }}">
     <link rel="icon" href="{{ url_for('static', filename='images/logo.ico') }}">
     <title>Inscription</title>
 </head>
 
 <body>
     <header>
+        {% if not condition %}
+            {{ condition }}
+            <script>
+                alert("Oups* Le nom d'utilisateur ou l'email est déjà utilisée.")
+            </script>
+        {% endif %}
+
         <!-- Navbar -->
         <nav>
             <a id="special" href="{{ url_for('index') }}">Accueil</a>
@@ -26,18 +34,17 @@
         <form action="{{ url_for('sign_in') }}" method="post" id="form" class="form">
             <h1>Inscription</h1>
             <section id="first">
-                <label for="pseudonyme">*Pseudonyme</label>
-                <input name="pseudo" id="pseudonyme" class="input" type="text" placeholder="Obligatoire" required >
+                <label for="pseudonyme">* Pseudonyme</label>
+                <input name="pseudo" id="pseudonyme" class="input" type="text" placeholder="connectus" title="* Requis" required >
                 <br>
-                <label for="email">*Adresse email</label>
-                <input name="email" id="email" class="input" type="text" placeholder="Obligatoire" required >
+                <label for="email">* Adresse email</label>
+                <input name="email" id="email" class="input" type="text" placeholder="connectus@email.com" title="* Requis" required >
                 <br>
-                <label for="password">*Mot de passe</label>
-                <input name="password" id="password" class="input" type="password" placeholder="Obligatoire" required>
-                <br>
+                <label for="password">* Mot de passe</label>
+                <input name="password" id="password" class="input" type="password" placeholder="motdepassesecret" title="* Requis" required>
             </section>
-            <br>
             <a href="{{ url_for('connection') }}" title="Se Connecter">Vous possédez déjà un compte ?</a>
+            <br>
             <br>
             <input id="submit" type="submit" value="CONTINUER">
         </form>

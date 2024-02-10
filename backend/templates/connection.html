@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/connection.css') }}">
+    <link rel="stylesheet" type="font/otf" href="{{ url_for('static', filename='../../../../frontend/font/kastella_script/KastellaScript_PERSONAL_USE_ONLY.otf') }}">
     <link rel="icon" href="{{ url_for('static', filename='images/logo.ico') }}">
     <title>Connexion</title>
 </head>
@@ -23,18 +24,22 @@
         <div id="hidder"></div>
 
         <!-- form -->
-        <form action="{{ url_for('connection') }}" method="post" id="form" class="form">
+        <form action="{{ url_for('log_in') }}" method="post" id="form" class="form">
             <h1>Connexion</h1>
-            <label for="username">Pseudonyme ou adresse email</label>
-            <input name="username" id="username" class="input" type="text"  placeholder="Ravi de vous revoir !" required >
             <br>
-            <label for="password">Mot de passe</label>
-            <input name="password" id="password" class="input" type="password" placeholder="Votre mot de passe est confidentiel" required>
+            <label for="username">* Pseudonyme ou adresse email</label>
+            <input name="username" id="username" class="input" type="text" placeholder="Ravi de vous revoir !" title="* Requis" required>
+            <br>
+            <br>
+            <label for="password">* Mot de passe</label>
+            <input name="password" id="password" class="input" type="password" placeholder="Votre mot de passe est confidentiel" title="* Requis" required>
+            <br>
             <br>
             <a href="{{ url_for('inscription') }}" title="S'Inscrire">Vous n'avez pas de compte ?</a>
             <br>
+            <br>
             <input id="submit" type="submit" value="SE CONNECTER">
-        </form>        
+        </form>
     </header>
 
     <footer>
