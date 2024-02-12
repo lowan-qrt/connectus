@@ -17,10 +17,10 @@ Pour installer l'application sur votre machine avec **Git**, allez sur le reposi
 Ouvrez le logiciel **Gitbash** et naviguez jusqu'au répertoire souhaité pour l'installation. Une fois fait, taper la commande ```git clone [lien HTTP]``` sans les accolades et en replaçant le texte par le lien copié précédemment.
 
 ## 2. Installer les modules
-Ouvrez le répertoire du projet avec votre IDE préféré en ayant comme racine le dossier "*_connectus_*". Dans la console, tapez la commande suivante pour installer l'ensemble des module **Python** nécessaires au fonctionnement de l'application : ```pip install -r requirements.txt```.
+Ouvrez le répertoire du projet avec votre IDE préféré en ayant comme racine le dossier "*_connectus_*" (vous pouvez faire un clic droit dessus et faire "*_Ouvrir avec [votre IDE]_*). Dans la console, tapez la commande suivante pour installer l'ensemble des module **Python** nécessaires au fonctionnement de l'application : ```pip install -r requirements.txt```.
 
 ## 3. Lancer l'application
-Rendez-vous sur le fichier *_main.py_* et exécutez-le. Dans un la console, une adresse IP vous sera donnée pour accédez à l'application. Copiez-la et collez-la dans votre navigateur préféré.
+Rendez-vous sur le fichier *_main.py_* du répertoire *_backend_* et exécutez-le. Dans un la console, une adresse IP vous sera donnée pour accédez à l'application. Copiez-la et collez-la dans votre navigateur préféré.
 
 ## Equipe des développeurs
 Martin V., Jean O. Max P. et Lowan Q.
