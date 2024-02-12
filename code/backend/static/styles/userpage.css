@@ -26,7 +26,7 @@ main {
 nav {
     height: 100vh;
     display: grid;
-    grid-template-columns: 17% 66% 17%;
+    grid-template-columns: 20% 65% 15%;
     grid-template-rows: 1fr 100%;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
@@ -91,6 +91,7 @@ nav {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    padding-top: 4%;
 }
 
 #navLeft a, #navRight a {
@@ -116,6 +117,7 @@ nav {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    padding-top: 4%;
 }
 
 /* Footer */

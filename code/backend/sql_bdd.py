@@ -1,4 +1,5 @@
 # Codage: utf-8
+# Module
 import sqlite3
 
 # ////////// functions ///////////

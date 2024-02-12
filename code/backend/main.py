@@ -25,7 +25,7 @@ def connection():
     Returns:
         flask.Response: HTTP response generated for the connection page.
     """
-    return render_template('connection.html')
+    return render_template('connection.html', condition=False)
 
 @app.route('/inscription')
 def inscription():
@@ -157,7 +157,8 @@ def log_in():
 
         return render_template('userpage.html', fname=userdatas['firstname'], lname=userdatas['lastname'], pseudo=userdatas['pseudo'])
     else:
-        return render_template('connection.html')
+        print('ici')
+        return render_template('connection.html', condition=True)
 # ////////////////////////////////
 
 # Execute the app

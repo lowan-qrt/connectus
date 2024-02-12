@@ -11,14 +11,13 @@
 </head>
 
 <body>
+    {% if not condition %}
+        <script>
+            alert("Oups* Le nom d'utilisateur ou l'email est déjà utilisée.")
+        </script>
+    {% endif %}
+    
     <header>
-        {% if not condition %}
-            {{ condition }}
-            <script>
-                alert("Oups* Le nom d'utilisateur ou l'email est déjà utilisée.")
-            </script>
-        {% endif %}
-
         <!-- Navbar -->
         <nav>
             <a id="special" href="{{ url_for('index') }}">Accueil</a>
