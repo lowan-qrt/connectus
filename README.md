@@ -6,7 +6,7 @@
 
 ## Liens de référence :
 - Lien d'installation **Git** : *_https://git-scm.com/downloads_*
-- Lien repository **Github** : *_https://github.com/lowan-qrt/connectus_*
+- Lien du repository **Github** : *_https://github.com/lowan-qrt/connectus_*
 
 
 ## 1. Récupérer l'application (avec GitBash)

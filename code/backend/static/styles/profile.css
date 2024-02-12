@@ -1,3 +1,4 @@
+
 /* Fonts */
 @font-face {
     font-family: 'Kastella';
@@ -108,6 +109,64 @@ nav {
 #central {
     border-left: solid grey;
     border-right: solid grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+}
+
+#button {
+    background: #262626;
+    border: none;
+    color: #fafafa;
+    cursor: pointer;
+    line-height: 1.8;
+    border: 0.1rem solid #dbdbdb;
+    border-radius: 0.3rem;
+    padding: 0 2.4rem;
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    margin-top: 5%;
+}
+
+#image {
+    float: left;
+    width: calc(33.333% - 1rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 7%;
+}
+
+#image img {
+    border-radius: 50%;
+}
+
+#settings {
+    margin-top: 1.1rem;
+}
+
+#user_name {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-top: 5%;
+}
+
+#stats {
+    margin-top: 2.3rem;
+}
+
+#stats li {
+    display: inline-block;
+    margin-right: 4rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+#bio {
+    line-height: 1.5;
+    margin-top: 2.3rem;
+    font-size: 1.5rem;
 }
 
 /* right panel */

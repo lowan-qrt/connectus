@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/userpage.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/profile.css') }}">
+    <link rel="stylesheet" type="font/otf" href="{{ url_for('static', filename='../../../../frontend/font/kastella_script/KastellaScript_PERSONAL_USE_ONLY.otf') }}">
     <link rel="icon" href="{{ url_for('static', filename='images/logo.ico') }}">
-    <title>Mon fil d'actualité</title>
+    <title>Profil</title>
 </head>
 <body>
     <main>
@@ -38,7 +39,28 @@
             </div>
 
             <!-- Central panel  -->
-            <div id="central"></div>
+            <div id="central">
+                <div id="image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnvOWD6Wes1I9kyHQAZOD460sAfKO3kptLZh7U1oX2Cg&s" alt="">    
+                </div>
+    
+                <div id="settings">
+                    <h1 id="user_name">{{ pseudo }}</h1>
+                    <button id="button">Modifier son profil</button>
+                </div>
+    
+                <div id="stats">
+                    <ul>
+                        <li><strong>0</strong> posts</li>
+                        <li><strong>0</strong> Abonnés</li>
+                        <li><strong>0</strong> Abonnements</li>
+                    </ul>    
+                </div>
+    
+                <div id="bio">    
+                    <p> {{ fname }} {{ lname }} : J'aime bien les voyages et le basket, je suis un utilisateur normal.</p>    
+                </div>
+            </div>
 
             <!-- Right panel -->
             <div id="navRight">

@@ -1,4 +1,5 @@
 # Coding: utf-8
+# Modules
 from flask import Flask, render_template, request
 import sql_bdd
 
@@ -8,30 +9,94 @@ app = Flask(__name__)
 # //////////// Pages /////////////
 @app.route('/')
 def index():
+    """
+    Home page.
+
+    Returns:
+        flask.Response: HTTP response generated for the home page.
+    """
     return render_template('home.html')
 
 @app.route('/connexion', methods=['POST', 'GET'])
 def connection():
+    """
+    Connection page.
+
+    Returns:
+        flask.Response: HTTP response generated for the connection page.
+    """
     return render_template('connection.html')
 
 @app.route('/inscription')
 def inscription():
+    """
+    Registration page.
+
+    Returns:
+        flask.Response: HTTP response generated for the registration page.
+    """
     return render_template('inscription.html', condition=True)
 
 @app.route('/contact')
 def contact():
+    """
+    Contact page.
+
+    Returns:
+        flask.Response: HTTP response generated for the contact page.
+    """
     return render_template('contact.html')
 
 @app.route('/plus-d-infos')
 def more_infos():
+    """
+    Additional information page.
+
+    Returns:
+        flask.Response: HTTP response generated for the additional information page.
+    """
     return render_template('more_infos.html')
 
 @app.route('/fil_d_actualite/<fname>/<lname>/<pseudo>')
 def userpage(fname, lname, pseudo):
+    """
+    Main user page.
+
+    Args:
+        fname (str): User's first name.
+        lname (str): User's last name.
+        pseudo (str): User's pseudonym.
+
+    Returns:
+        flask.Response: HTTP response generated for the user page with arguments: fname, lname, and pseudo.
+    """
     return render_template('userpage.html', fname=fname, lname=lname, pseudo=pseudo)
+
+@app.route('/profil/<fname>/<lname>/<pseudo>', methods=['POST', 'GET'])
+def profile(fname, lname, pseudo):
+    """
+    User profile page.
+
+    Args:
+        fname (str): User's first name.
+        lname (str): User's last name.
+        pseudo (str): User's pseudonym.
+
+    Returns:
+        flask.Response: HTTP response generated for the profile page with arguments: fname, lname, and pseudo.
+    """
+    return render_template('profile.html', pseudo=pseudo, fname=fname, lname=lname)
 
 @app.route('/Bienvenue', methods=['POST'])
 def sign_in():
+    """
+    Registration route.
+
+    Returns:
+        flask.Response: HTTP response generated for the registration page with the argument: condition.
+        OR
+        flask.Response: HTTP response generated for the user page with arguments: fname, lname.
+    """
     datas = request.form # get elements from form
 
     print('\n\t>>> MESSAGE: [Datas received by form 1]\n') # console message
@@ -54,10 +119,18 @@ def sign_in():
         return render_template('inscription.html', condition=condition)
     else:
         # Welcome
-        return render_template('userpage.html', fname=firstname, lname=lastname)
+        return render_template('userpage.html', fname=firstname, lname=lastname, pseudo=pseudo)
 
 @app.route("/fil-des-posts", methods=['POST'])
 def log_in():
+    """
+    Connection route.
+
+    Returns:
+        flask.Response: HTTP response generated for the connection page.
+        OR
+        flask.Response: HTTP response generated for the user page with arguments: fname, lname, and pseudo.
+    """
     datas = request.form # get elements from form
 
     print('\n\t>>> MESSAGE: [Datas received by form 2]\n') # console message
