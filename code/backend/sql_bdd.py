@@ -1,10 +1,26 @@
-# Codind: utf-8
+# Codage: utf-8
 import sqlite3
 
 # ////////// functions ///////////
 def signIn(pseudo, password, email, firstname, lastname, birthday, phone):
-    connection = sqlite3.connect('code/backend/BDD.db') # connection to database
+    """
+    Function to register a new user.
+
+    Args:
+        pseudo (str): User's pseudonym.
+        password (str): User's password.
+        email (str): User's email address.
+        firstname (str): User's first name.
+        lastname (str): User's last name.
+        birthday (str): User's birthday.
+        phone (str): User's phone number.
+
+    Returns:
+        bool: True if registration is successful, False otherwise.
+    """
+    connection = sqlite3.connect('code/backend/BDD.db')  # connection to the database
     cursor = connection.cursor()
+
     # List all pseudos and emails
     cursor.execute("SELECT pseudo, email FROM Members")
     results = cursor.fetchall()
@@ -20,17 +36,27 @@ def signIn(pseudo, password, email, firstname, lastname, birthday, phone):
         # Insert the user into Members table
         print("\n\t>>> MESSAGE: [Registration allowed]")
         cursor.execute("INSERT INTO Members (pseudo, password, email) VALUES (?, ?, ?)", (pseudo, password, email))
-        user_id = cursor.lastrowid # get last ID
-        # Insert the users informations into Members_info table
+        user_id = cursor.lastrowid  # get the last ID
+        # Insert the user's information into Members_info table
         cursor.execute("INSERT INTO Members_infos (user_id, firstname, lastname, birthday, phone) VALUES (?, ?, ?, ?, ?)", (user_id, firstname, lastname, birthday, phone))
         print(f'\n\t>>> MESSAGE: [{firstname} {lastname} alias "{pseudo}" added]')
-        # Valid and stop connection
+        # Valid and stop the connection
         connection.commit()
         connection.close()
         return True
 
 def logIn(username, password):
-    connection = sqlite3.connect('code/backend/BDD.db') # connection to database
+    """
+    Function to authenticate a user.
+
+    Args:
+        username (str): User's email or pseudonym.
+        password (str): User's password.
+
+    Returns:
+        Union[bool, list]: List of user data if authentication is successful, False otherwise.
+    """
+    connection = sqlite3.connect('code/backend/BDD.db')  # connection to the database
     cursor = connection.cursor()
 
     # Check datas received
@@ -48,13 +74,19 @@ def logIn(username, password):
         print("\n\t>>> MESSAGE: [Connection not allowed]")
         connection.close()
         return False
-
-def datasCollected(datas):
-    return datas
 # ////////////////////////////////
 
 # //////////// Tools /////////////
 def delete(tables_list):
+    """
+    Function to delete data from specified tables.
+
+    Args:
+        tables_list (list): List of table names to be deleted.
+
+    Returns:
+        None
+    """
     connection = sqlite3.connect('code/backend/BDD.db')
     cursor = connection.cursor()
     for table in tables_list:
@@ -62,9 +94,15 @@ def delete(tables_list):
 
     connection.commit()
     x = len(tables_list)
-    print(f"{x} tables was deleted.")
+    print(f"{x} tables were deleted.")
 
 def delete_table():
+    """
+    Function to interactively delete tables from the database.
+
+    Returns:
+        None
+    """
     instruction = input('Names of tables to delete : ').split()
     delete(instruction)
 # ////////////////////////////////
