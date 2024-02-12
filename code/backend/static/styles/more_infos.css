@@ -1,0 +1,148 @@
+/* Fonts */
+@font-face {
+    font-family: 'Kastella';
+    /* src: url('{{ url_for("static", filename="../../../../../frontend/font/kastella_script/KastellaScript_PERSONAL_USE_ONLY.otf") }}'); */
+    src: url('../../../frontend/font/kastella_script/KastellaScript_PERSONAL_USE_ONLY.otf') format('truetype');
+}
+
+/* All */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Html */
+html {
+    overflow-x: hidden;
+    font-size: 11px; /* reference */
+}
+
+/* Body */
+body {
+    background-image: url(../images/wallpaper_contact.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+/* Header */
+header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+/* navbar */
+nav {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+}
+
+/* nav links */
+nav a {
+    width: 100%;
+    text-align: center;
+    padding: 1.5%;
+    font-family: Arial;
+    font-weight: bold;
+    color: whitesmoke;
+    text-shadow: 4px 4px rgb(0, 0, 0);
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+/* home link */
+#special {
+    background: -webkit-linear-gradient(left, blue, purple, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px rgba(255, 255, 255, 0.040);
+}
+
+/* hover effects */
+nav a:hover:before {
+    content: '| ';
+}
+
+nav a:hover:after {
+    content: ' |';
+}
+
+/* Main */
+main {
+    position: relative;
+    min-height:100vh;
+    width: 100vw;
+}
+
+#teamwork {
+    padding: 6% 5% 0;
+    color: white;
+}
+
+#top {
+    text-align: justify;
+    font-size: 2rem;
+    backdrop-filter: blur(5px);
+}
+
+/* authors line */
+#authors {
+    text-align: right;
+    font-style: italic;
+    color: grey;
+}
+
+#bot {
+    margin-top: 4%;
+    text-align: justify;
+    font-size: 2rem;
+    backdrop-filter: blur(5px);
+}
+
+#top, #bot {
+    border-radius: 10px;
+}
+
+#top h1, #bot h1 {
+    text-decoration: underline;
+}
+
+/* creative commons license */
+#CC_link {
+    color: blueviolet;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 3% 4%;
+    background-color: black;
+    color: white;
+    font-family: Arial;
+    text-align: left;
+    font-size: 1.6rem;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* all links */
+.link a {
+    padding: 5% 0;
+    color: grey;
+}
+
+.link a:hover {
+    color: white;
+}

@@ -1,0 +1,218 @@
+/* Fonts */
+@font-face {
+    font-family: 'Kastella';
+    /* src: url('{{ url_for("static", filename="../../../../../frontend/font/kastella_script/KastellaScript_PERSONAL_USE_ONLY.otf") }}'); */
+    src: url('../../../frontend/font/kastella_script/KastellaScript_PERSONAL_USE_ONLY.otf') format('truetype');
+}
+
+/* All */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Html */
+html {
+    /* overflow-x: hidden; */
+    background-color: rgb(5, 7, 27);
+    font-size: 11px; /* reference */
+}
+
+/* Main */
+main {
+    min-height: 100vh;
+}
+
+/* navbar */
+nav {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 17% 66% 17%;
+    grid-template-rows: 1fr 100%;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    color: white;
+}
+
+#appLogo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid grey;
+}
+
+#appLogo a {
+    text-decoration: none;
+    color: white;
+    font-size: 3.5rem;
+}
+
+#appLogo a span {
+    font-style: italic;
+    background: -webkit-linear-gradient(top, blue, purple, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#welcomeUser {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 2%;
+    border-left: solid grey;
+    border-right: solid grey;
+    border-bottom: solid grey;
+}
+
+#welcomeUser h1 {
+    font-size: 3.5rem;
+}
+
+#welcomeUser h2 {
+    font-size: 2rem;
+}
+
+#pseudo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid grey;
+    font-size: 1.3rem;
+}
+
+#navLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#central {
+    border-left: solid grey;
+    border-right: solid grey;
+}
+
+#navRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#navLeft a, #navRight a {
+    padding: 5% 15%;
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: grey;
+}
+
+#navLeft a:hover, #navRight a:hover {
+    color: white;
+}
+
+/* Footer */
+footer {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 3% 4%;
+    background-color: black;
+    color: white;
+    font-family: Arial;
+    text-align: left;
+    font-size: 1.6rem;
+}
+
+/* description & notes of publication */
+#left {
+    width: 40%;
+    font-size: 1.6rem;
+}
+
+/* authors line */
+#authors {
+    float: right;
+    font-style: italic;
+    color: grey;
+}
+
+/* links & informations */
+#right {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 5rem;
+}
+
+/* navigation */
+#one {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+/* links */
+#oneOne {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#oneTwo {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+#oneThree {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+#oneFour {
+    grid-column: 1;
+    grid-row: 5;
+}
+
+/* more infos */
+#two {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+/* links */
+#twoOne {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#twoTwo {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+/* contact us */
+#three {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+/* link */
+#threeOne {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+#threeTwo {
+    grid-column: 3;
+    grid-row: 3; 
+}
+
+/* all links */
+.link a {
+    color: grey;
+}
+
+.link a:hover {
+    color: white;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/userpage.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/logo.ico') }}">
+    <title>Mon fil d'actualité</title>
+</head>
+<body>
+    <main>
+        <!-- Navbar -->
+        <nav>
+            <div id="appLogo">
+                <a href="{{ url_for('userpage', fname=fname, lname=lname, pseudo=pseudo) }}">Connect <span>Us</span></a>
+            </div>
+            <div id="welcomeUser">
+                <h1>Bonjour {{ fname }}</h1>
+                <h2>Fil d'actualité</h2>
+            </div>
+            <div id="pseudo">
+                <img src="#" alt="">
+                <h2>{{ pseudo }}</h2>
+            </div>
+            <div id="navLeft">
+                <a href="{{ url_for('userpage', fname=fname, lname=lname, pseudo=pseudo) }}">Accueil</a>
+                <a href="#">Notification</a>
+                <a href="#">Profile</a>
+                <a href="#">Paramètres</a>
+                <a href="{{ url_for('index') }}">Déconnexion</a>
+            </div>
+            <div id="central"></div>
+            <div id="navRight">
+                <a href="#">Créer</a>
+                <a href="#">Messages</a>
+            </div>
+        </nav>
+    </main>
+
+    <footer>
+        <!-- Description & notes of publication -->
+        <div id="left">
+            <p>Ce site web a été élaboré et conçu avec passion par une équipe dévouée composée de Martin Vigneron, Max
+                Pomier, Jean Onillon et Lowan Quarton. L'idée a pris forme dans le cadre d'un projet scolaire spécialité
+                Numérique et Sciences Informatiques de niveau Terminale, réalisé avec enthousiasme et créativité.</p>
+            <br>
+            <p>Le contexte de réalisation en 2024 a permis à notre équipe de mettre en œuvre ses compétences et
+                connaissances acquises tout au long de notre parcours éducatif. Ce projet a été l'occasion de relever
+                des défis passionnants, de développer nos compétences techniques et de donner vie à une vision commune.
+                Nous sommes fiers de partager ce résultat avec vous, et nous espérons que notre site apporte une
+                expérience enrichissante. N'hésitez pas à explorer les différentes sections et à nous faire part de vos
+                retours.</p>
+            <br>
+            <p>Merci de votre visite !</p>
+            <br>
+            <!-- Authors -->
+            <p id="authors">— L'équipe de développeurs</span></p>
+        </div>
+
+        <!-- Links & informations -->
+        <div id="right">
+            <div id="one">
+                <h3>NAVIGATION</h3>
+            </div>
+            <div id="two">
+                <h3>PLUS D'INFOS</h3>
+            </div>
+            <div id="three">
+                <h3>NOUS CONTACTER</h3>
+            </div>
+            <div class="link" id="oneOne">
+                <a href="{{ url_for('index') }}">Accueil</a>
+            </div>
+            <div class="link" id="oneTwo">
+                <a href="{{ url_for('connection') }}">Connexion</a>
+            </div>
+            <div class="link" id="oneThree">
+                <a href="{{ url_for('inscription') }}">Inscription</a>
+            </div>
+            <div class="link" id="oneFour">
+                <a href="{{ url_for('contact') }}">Contact</a>
+            </div>
+            <div class="link" id="twoOne">
+                <a href="{{ url_for('more_infos') }}">À Propos</a>
+            </div>
+            <div class="link" id="twoTwo">
+                <a href="{{ url_for('more_infos') }}">Mentions légales</a>
+            </div>
+            <div class="link" id="threeOne">
+                <a href="{{ url_for('contact') }}#teamwork">Coordonnées</a>
+            </div>
+            <div class="link" id="threeTwo">
+                <a href="{{ url_for('contact') }}#git_link">Dépôt GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
